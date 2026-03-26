@@ -1,0 +1,7 @@
+{
+  "name": "ark-skills",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A GitHub-hosted skill repository with npx-first installation.",
+  "license": "MIT"
+}

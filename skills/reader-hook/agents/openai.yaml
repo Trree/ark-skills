@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ark Reader Hook"
+  short_description: "Verify ark-skills installation"
+  default_prompt: "Use $ark-reader-hook to verify that ark-skills was installed and discovered correctly."
