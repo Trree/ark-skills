@@ -1,4 +1,4 @@
 interface:
   display_name: "Ark Reader Hook"
-  short_description: "Verify ark-skills installation"
-  default_prompt: "Use $ark-reader-hook to verify that ark-skills was installed and discovered correctly."
+  short_description: "把抽象结论改成读者可感的入口"
+  default_prompt: "Use $reader-hook to rewrite an abstract article angle into a reader-centered hook with a concrete pain-point entry."

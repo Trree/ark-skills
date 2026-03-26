@@ -1,6 +1,6 @@
 {
   "name": "ark-skills",
   "display_name": "ark-skills",
-  "description": "A minimal skill repository with npx-first installation and one example skill.",
+  "description": "A writing-focused skill repository with npx-first installation.",
   "version": "0.1.0"
 }
