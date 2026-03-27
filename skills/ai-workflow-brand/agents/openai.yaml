@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ark AI Workflow Brand"
+  short_description: "用工程视角收束 AI 内容定位、选题和品牌主线"
+  default_prompt: "Use $ai-workflow-brand to define positioning, shape topic direction, or audit whether a draft fits the AI workflow brand line."

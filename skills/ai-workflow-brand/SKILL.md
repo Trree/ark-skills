@@ -5,6 +5,10 @@ description: 母 skill。用工程视角解释 AI 如何进入真实工作流，
 
 # AI Workflow Brand
 
+这是对外公开入口 skill。
+
+用户应该直接使用这个入口来处理定位、选题方向和品牌主线检查，不需要单独记忆内部 subskill。
+
 先读取：
 
 - `references/brand.md`
@@ -23,6 +27,14 @@ description: 母 skill。用工程视角解释 AI 如何进入真实工作流，
 ### 3. 审稿 / 跑偏检查 / 重写建议
 调用：
 - `subskills/content-auditor/SKILL.md`
+
+## 在仓库中的位置
+
+- 公开角色：策略与品牌入口
+- 内部能力：通过 subskill 完成更细的选题和审稿动作
+- 典型搭配：
+  - 写完后用 `reader-hook` 优化标题和开头
+  - 做公众号流程时可作为 `wechat-pipeline` 的前置定位或发布前审查节点
 
 ## 总原则
 输出必须满足：

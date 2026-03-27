@@ -1,10 +1,14 @@
 # ark-skills
 
-`ark-skills` is a GitHub-hosted skill repository designed for `npx skills add`.
+`ark-skills` is a GitHub-hosted content workflow skill repository designed for `npx skills add`.
 
-It currently includes one writing skill:
+It is organized as a small system with three public entry skills:
 
-- `reader-hook`: rewrites an abstract author angle into a concrete, reader-centered entry point
+- `ai-workflow-brand`: strategy and brand entry point
+- `reader-hook`: title and opening refinement
+- `wechat-pipeline`: publishing workflow orchestration
+
+Internal subskills stay nested under their parent skill and are not the main entry points users need to remember.
 
 ## Install
 
@@ -20,7 +24,13 @@ If your environment supports Claude Code plugin marketplaces, you can also add t
 /plugin marketplace add <your-github-username>/ark-skills
 ```
 
-## Included Skills
+## Public Skills
+
+### `ai-workflow-brand`
+
+Use `ai-workflow-brand` when you need positioning, topic direction, or a brand-line audit.
+
+This is the strategy entry point. It routes internally to its own subskills when needed.
 
 ### `reader-hook`
 
@@ -32,20 +42,56 @@ It is designed for cases like:
 - the opening starts with essence, trend, or judgment before concrete tension
 - the article is about AI, platforms, cognition, work, or creators, but the reader still lacks an entry point
 
+### `wechat-pipeline`
+
+Use `wechat-pipeline` when you want to run a repeatable WeChat content workflow from topic selection through publishing preparation.
+
+It can use local `ark-skills` capabilities as optional enhancement steps while keeping the main pipeline stable.
+
+## Recommended Entry Paths
+
+- Need positioning, topic direction, or brand guardrails: start with `ai-workflow-brand`
+- Need a stronger title or opening: use `reader-hook`
+- Need an end-to-end production flow: use `wechat-pipeline`
+
+See `skills/CATALOG.md` for the full relationship map.
+
 ## Repository Layout
 
 ```text
 .
 ├── .claude-plugin/
 │   └── marketplace.json
+├── docs/
+│   └── superpowers/
+│       └── specs/
 └── skills/
-    └── reader-hook/
+    ├── CATALOG.md
+    ├── ai-workflow-brand/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   │   └── openai.yaml
+    │   ├── references/
+    │   └── subskills/
+    ├── reader-hook/
+    │   ├── SKILL.md
+    │   └── agents/
+    │       └── openai.yaml
+    └── wechat-pipeline/
         ├── SKILL.md
         └── agents/
             └── openai.yaml
 ```
 
 Each skill lives in its own folder under `skills/<skill-name>/`.
+
+## Architecture
+
+The repository uses three layers:
+
+- Public entry skills: the main skills users should invoke directly
+- Internal subskills: focused helpers used by a parent skill
+- Orchestration skills: workflow skills that connect multiple capabilities into a repeatable process
 
 ## Add a New Skill
 
@@ -82,6 +128,7 @@ skills/
 ## Principles
 
 - Prefer `npx skills add` as the primary install path
-- Keep each skill self-contained after installation
+- Keep public entry points few and obvious
 - Treat `skills/` as the single source of truth
+- Keep subskills nested under the parent skill that owns them
 - Avoid shared runtime dependencies between skills unless you later add a publish-time sync step

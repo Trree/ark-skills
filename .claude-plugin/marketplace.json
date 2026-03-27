@@ -1,6 +1,6 @@
 {
   "name": "ark-skills",
-  "display_name": "ark-skills",
-  "description": "A writing-focused skill repository with npx-first installation.",
+  "display_name": "Ark Skills",
+  "description": "A content workflow skill system with strategy, refinement, and publishing orchestration.",
   "version": "0.1.0"
 }

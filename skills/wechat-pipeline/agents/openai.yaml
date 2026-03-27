@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ark WeChat Pipeline"
+  short_description: "把公众号内容生产稳定成可复用流水线"
+  default_prompt: "Use $wechat-pipeline to orchestrate a repeatable WeChat content workflow from topic selection to publishing preparation, with optional local skill enhancements."

@@ -2,6 +2,6 @@
   "name": "ark-skills",
   "private": true,
   "version": "0.1.0",
-  "description": "A GitHub-hosted skill repository with npx-first installation and writing-focused skills.",
+  "description": "A GitHub-hosted content workflow skill system with strategy, refinement, and publishing orchestration.",
   "license": "MIT"
 }
