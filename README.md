@@ -8,7 +8,7 @@ It is organized as a small system with three public entry skills:
 - `reader-hook`: title and opening refinement
 - `wechat-pipeline`: publishing workflow orchestration
 
-Internal subskills stay nested under their parent skill and are not the main entry points users need to remember.
+Internal subskills stay nested under their parent skill and are not the main entry points users need to remember. For example, `reader-hook` owns internal refiners for pain-first openings, scene selection, anti-preach rewrites, and distribution hooks.
 
 ## Install
 
@@ -41,6 +41,13 @@ It is designed for cases like:
 - the title sounds like the author's conclusion, not the reader's problem
 - the opening starts with essence, trend, or judgment before concrete tension
 - the article is about AI, platforms, cognition, work, or creators, but the reader still lacks an entry point
+
+Internally, it can further route to focused subskills for:
+
+- pain-first opening rewrites
+- example and scene selection
+- anti-preach tone correction
+- distribution-oriented hook reinforcement
 
 ### `wechat-pipeline`
 
@@ -75,6 +82,7 @@ See `skills/CATALOG.md` for the full relationship map.
     │   └── subskills/
     ├── reader-hook/
     │   ├── SKILL.md
+    │   ├── subskills/
     │   └── agents/
     │       └── openai.yaml
     └── wechat-pipeline/
