@@ -104,3 +104,5 @@ List 3 likely failure modes, such as:
 - Do not write the full article unless explicitly asked
 - Do not give generic outlines
 - Do not allow the article to proceed without a real scene and a core judgment
+- If the user has not specified a writing structure, default to the formula in `references/writing-formula.md`: 表面问题 → 常见误判 → 底层机制 → 重新定价 → 可执行动作
+- Check the user's topic against the four long-term topic types in `references/writing-formula.md` (被低估的能力 / 被误判的问题 / 被高估的方法 / 被忽视的慢变量) — name which type it belongs to
