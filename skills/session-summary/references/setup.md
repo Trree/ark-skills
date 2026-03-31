@@ -1,5 +1,8 @@
 # 安装后配置
 
+> **注意：** `SessionEnd` 的 `agent` 类型 hook 存在静默失败的已知 bug（[anthropics/claude-code#40010](https://github.com/anthropics/claude-code/issues/40010)）。
+> 本 skill 改用 `command` hook 调用 `summarize.sh`，脚本内部再通过 `claude -p` 完成总结，以绕过该问题。
+
 将以下内容合并到 `~/.claude/settings.json`：
 
 ```json
@@ -9,17 +12,20 @@
       {
         "hooks": [
           {
-            "type": "agent",
-            "once": true,
-            "prompt": "读取 transcript_path 的对话内容，按照 session-summary skill 的 templates/summary.md.template 格式生成中文总结，保存到 .claude/summaries/session_<session_id前8位>_<YYYYMMDD_HHMMSS>.md。不足3轮对话则跳过。",
-            "tools": ["Read", "Write", "Glob"],
-            "timeout": 60
+            "type": "command",
+            "command": "~/.claude/skills/session-summary/scripts/summarize.sh"
           }
         ]
       }
     ]
   }
 }
+```
+
+首次使用前需确保脚本有执行权限：
+
+```bash
+chmod +x ~/.claude/skills/session-summary/scripts/summarize.sh
 ```
 
 ## 总结存储位置

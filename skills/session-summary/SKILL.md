@@ -14,6 +14,9 @@ tools: Read, Write, Glob
 
 安装后需要将 hooks 配置合并到 `~/.claude/settings.json`，详见 `references/setup.md`。
 
+> **实现说明：** 由于 `SessionEnd` 的 `agent` 类型 hook 存在静默失败 bug（[anthropics/claude-code#40010](https://github.com/anthropics/claude-code/issues/40010)），
+> 改用 `command` hook 调用 `scripts/summarize.sh`，脚本内部通过 `claude -p` 异步完成总结。
+
 ## 去重机制
 
 - 同一 session 只生成一次（`once: true`）
