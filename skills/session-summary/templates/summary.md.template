@@ -1,0 +1,29 @@
+# 会话总结
+
+**时间**：{{datetime}}
+**目录**：{{cwd}}
+**Session**：{{session_id}}
+
+## 核心目标
+
+{{goal}}
+
+## 完成内容
+
+{{completed}}
+
+## 关键决策
+
+{{decisions}}
+
+## 待续事项
+
+{{next}}
+
+## 使用的 Skill
+
+{{skills_used}}
+
+---
+
+*由 session-summary skill 自动生成*
