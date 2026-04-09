@@ -1,4 +1,4 @@
 interface:
   display_name: "Ark Reader Hook"
-  short_description: "把抽象结论改成读者可感的入口"
-  default_prompt: "Use $reader-hook to rewrite an abstract article angle into a reader-centered hook with a concrete pain-point entry."
+  short_description: "检查标题和开头的入口风险，只给建议不改文"
+  default_prompt: "Use $reader-hook to review an article's title and opening, identify reader-entry risks, and provide limited suggestions without rewriting the body."
