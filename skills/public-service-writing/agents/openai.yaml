@@ -1,0 +1,7 @@
+interface:
+  display_name: "深圳卫健委风格写作"
+  short_description: "用深圳卫健委的风格把健康知识写成读者想转发的公众号文章"
+  default_prompt: "Use $public-service-writing to 用深圳卫健委的毒舌老友风格，把这个健康话题写成一篇公众号文章。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:www.zhihu.com)",
+      "WebFetch(domain:search.bilibili.com)",
+      "WebFetch(domain:www.sohu.com)",
+      "WebFetch(domain:weixin.sogou.com)",
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:zhuanlan.zhihu.com)",
+      "WebFetch(domain:www.163.com)",
+      "WebFetch(domain:duckduckgo.com)",
+      "WebFetch(domain:36kr.com)",
+      "WebFetch(domain:mp.weixin.qq.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.toutiao.com)",
+      "WebFetch(domain:new.qq.com)",
+      "WebFetch(domain:www.jianshu.com)",
+      "WebFetch(domain:www.thepaper.cn)",
+      "WebFetch(domain:search.yahoo.com)",
+      "WebFetch(domain:www.newrank.cn)"
+    ]
+  }
+}
